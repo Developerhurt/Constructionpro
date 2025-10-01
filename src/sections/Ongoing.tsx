@@ -107,7 +107,7 @@ export default function Ongoing() {
             {filterOptions.map(option => (
               <button 
                 key={option.value} 
-                onClick={() => setFilter(option.value as any)}
+                onClick={() => setFilter(option.value as "All" | Project["tag"])}
                 className={`group relative px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
                   filter === option.value 
                     ? 'bg-gradient-to-r from-brand-500 to-accent-500 text-white shadow-glow' 
@@ -235,7 +235,7 @@ export default function Ongoing() {
             { label: "Avg Progress", value: `${Math.round(DATA.reduce((acc, p) => acc + p.progress, 0) / DATA.length)}%`, icon: "📊" },
             { label: "Total Budget", value: "₹450 Cr", icon: "💰" },
             { label: "On Schedule", value: "100%", icon: "⏰" }
-          ].map((stat, i) => (
+          ].map((stat) => (
             <div key={stat.label} className="glass rounded-2xl p-6 text-center">
               <div className="text-3xl mb-2">{stat.icon}</div>
               <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>

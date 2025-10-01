@@ -129,7 +129,7 @@ export default function Services() {
               Ready to start your <span className="gradient-text">next project</span>?
             </h3>
             <p className="text-xl text-white/80 mb-8">
-              Let's discuss how we can bring your vision to life with our comprehensive construction services.
+              Let&apos;s discuss how we can bring your vision to life with our comprehensive construction services.
             </p>
             <a 
               href="#contact" 
